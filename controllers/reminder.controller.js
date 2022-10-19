@@ -11,38 +11,58 @@ import httpStatusCodes from '../utils/httpStatusCodes.js'
 
 // Create reminder controller logic
 export const createReminderController = async (req, res) => {
-  const reminder = await createReminderService(req.body)
-  res.json(Success(reminder, responseMessages.SAVE_SUCCESS))
+  try{
+    const reminder = await createReminderService(req.body)
+    res.json(Success(reminder, responseMessages.SAVE_SUCCESS))
+  }catch(error){
+    res.json(error)
+  }
 }
 
 // Fetch reminders controller logic
 export const fetchRemindersController = async (req, res) => {
-  const reminders = await fetchRemindersService()
-  reminders.length === 0
-    ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
-    : res.json(Success(reminders, responseMessages.FETCH_SUCCESS))
+  try{
+    const reminders = await fetchRemindersService()
+    reminders.length === 0
+      ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+      : res.json(Success(reminders, responseMessages.FETCH_SUCCESS))
+  }catch(error){
+    res.json(error)
+  }
 }
 
 // Fetch reminder comtroller logic
 export const fetchReminderController = async (req, res) => {
-  const reminder = await fetchReminderService(req.params.id)
-  !reminder
-    ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
-    : res.json(Success(reminder, responseMessages.FETCH_SUCCESS))
+  try{
+    const reminder = await fetchReminderService(req.params.id)
+    !reminder
+      ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+      : res.json(Success(reminder, responseMessages.FETCH_SUCCESS))
+  }catch(error){
+    res.json(error)
+  }
 }
 
 // Update reminder controller logic
 export const updateReminderController = async (req, res) => {
-  const reminder = await updateReminderService(req.params.id, req.body)
-  !reminder
-    ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
-    : res.json(Success(reminder, responseMessages.UPDATE_SUCCESS))
+  try{
+    const reminder = await updateReminderService(req.params.id, req.body)
+    !reminder
+      ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+      : res.json(Success(reminder, responseMessages.UPDATE_SUCCESS))
+  }catch(error){
+    res.json(error)
+  }
 }
 
 // Delete reminder controller logic
 export const deleteReminderController = async (req, res) => {
-  const reminder = await deleteReminderService(req.params.id)
-  !reminder
-    ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
-    : res.json(Success(reminder, responseMessages.DELETE_SUCCESS))
+  try{
+    const reminder = await deleteReminderService(req.params.id)
+    !reminder
+      ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+      : res.json(Success(reminder, responseMessages.DELETE_SUCCESS))
+  }catch(error){
+    res.json(error)
+  }
 }

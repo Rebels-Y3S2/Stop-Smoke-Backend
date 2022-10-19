@@ -5,55 +5,29 @@ import {
   updateReminder,
   deleteReminder
 } from '../repository/index.js'
-import responseMessages from '../utils/responseMessages.js'
 
 // Create reminder service logic
-export const createReminderService = async (data) => {
-  try {
+export const createReminderService = (data) => {
     const { reminderTitle, startDate, endDate, customQuote, challenge, diary } = data
-    await createReminder({ reminderTitle, startDate, endDate, customQuote, challenge, diary })
-    return Promise.resolve(responseMessages.SAVE_SUCCESS)
-  } catch (error) {
-    console.log(error)
-  }
+    return createReminder({ reminderTitle, startDate, endDate, customQuote, challenge, diary })
 }
 
 // Fetch reminders service logic
-export const fetchRemindersService = async () => {
-  try {
-    const reminders = await fetchReminders()
-    return Promise.resolve(reminders)
-  } catch (error) {
-    console.log(error)
-  }
+export const fetchRemindersService = () => {
+    return fetchReminders()
 }
 
 // Fetch reminder service logic
-export const fetchReminderService = async (id) => {
-  try {
-    const reminder = await fetchReminder(id)
-    return Promise.resolve(reminder)
-  } catch (error) {
-    console.log(error)
-  }
+export const fetchReminderService = (id) => {
+    return fetchReminder(id)
 }
 
 // Update reminder service logic
-export const updateReminderService = async (id, data) => {
-  try {
-    const reminder = await updateReminder(id, data)
-    return Promise.resolve(reminder)
-  } catch (error) {
-    console.log(error)
-  }
+export const updateReminderService = (id, data) => {
+    return updateReminder(id, data)
 }
 
 // Delete reminder service logic
-export const deleteReminderService = async (id) => {
-  try {
-    const reminder = await deleteReminder(id)
-    return Promise.resolve(reminder)
-  } catch (error) {
-    console.log(error)
-  }
+export const deleteReminderService = (id) => {
+    return deleteReminder(id)
 }

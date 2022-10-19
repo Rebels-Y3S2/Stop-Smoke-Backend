@@ -15,9 +15,6 @@ connect()
 
 App.use('/api', apiRouter)
 
-App.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 const port = process.env.PORT || 3001
 App.listen(port, console.log(portCon(`🚀 Server listening on PORT ${process.env.PORT} 🚀`)))
 

@@ -1,8 +1,9 @@
 // Imports
-import { createReminderController, fetchRemindersController } from './reminder.controller.js'
+import { createReminderController, fetchRemindersController, fetchReminderController } from './reminder.controller.js'
 
 // Exports
 export {
   createReminderController,
-  fetchRemindersController
+  fetchRemindersController,
+  fetchReminderController
 }

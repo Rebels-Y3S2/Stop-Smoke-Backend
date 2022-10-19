@@ -18,3 +18,12 @@ export const fetchReminders = () =>
     }).catch((error) => {
       throw new AppError(error._message)
     })
+
+// Fetch reminder repository logic
+export const fetchReminder = (id) =>
+  Reminder.findById(id)
+    .then((reminder) => {
+      return Promise.resolve(reminder)
+    }).catch((error) => {
+      throw new AppError(error)
+    })

@@ -23,7 +23,7 @@ export const fetchRemindersController = async (req, res) => {
     : res.json(Success(reminders, responseMessages.FETCH_SUCCESS))
 }
 
-// Fetch reminder comtroller logic
+// Fetch reminder controller logic
 export const fetchReminderController = async (req, res) => {
   const reminder = await fetchReminderService(req.params.id)
   !reminder

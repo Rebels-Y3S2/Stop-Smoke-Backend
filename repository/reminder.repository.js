@@ -27,3 +27,12 @@ export const fetchReminder = (id) =>
     }).catch((error) => {
       throw new AppError(error)
     })
+
+// Update reminder repository logic
+export const updateReminder = (id, data) =>
+  Reminder.findByIdAndUpdate(id, data, { new: true })
+    .then((reminder) => {
+      return Promise.resolve(reminder)
+    }).catch((error) => {
+      throw new AppError(error)
+    })

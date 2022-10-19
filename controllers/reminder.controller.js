@@ -1,4 +1,4 @@
-import { createReminderService, fetchReminderService, fetchRemindersService } from '../services/index.js'
+import { createReminderService, fetchReminderService, fetchRemindersService, updateReminderService } from '../services/index.js'
 import responseMessages from '../utils/responseMessages.js'
 import Success from '../utils/success.js'
 import httpStatusCodes from '../utils/httpStatusCodes.js'
@@ -23,4 +23,12 @@ export const fetchReminderController = async (req, res) => {
   !reminder
     ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
     : res.json(Success(reminder, responseMessages.FETCH_SUCCESS))
+}
+
+// Update reminder controller logic
+export const updateReminderController = async (req, res) => {
+  const reminder = await updateReminderService(req.params.id, req.body)
+  !reminder
+    ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+    : res.json(Success(reminder, responseMessages.UPDATE_SUCCESS))
 }

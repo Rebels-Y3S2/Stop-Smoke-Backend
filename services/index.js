@@ -1,7 +1,8 @@
 // Imports
-import { createReminderService } from './reminder.service.js'
+import { createReminderService, fetchRemindersService } from './reminder.service.js'
 
 // Exports
 export {
-  createReminderService
+  createReminderService,
+  fetchRemindersService
 }

@@ -1,7 +1,8 @@
 // Imports
-import { createReminder } from './reminder.repository.js'
+import { createReminder, fetchReminders } from './reminder.repository.js'
 
 // Exports
 export {
-  createReminder
+  createReminder,
+  fetchReminders
 }

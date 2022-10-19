@@ -1,4 +1,10 @@
-import { createReminderService, fetchReminderService, fetchRemindersService, updateReminderService } from '../services/index.js'
+import {
+  createReminderService,
+  deleteReminderService,
+  fetchReminderService,
+  fetchRemindersService,
+  updateReminderService
+} from '../services/index.js'
 import responseMessages from '../utils/responseMessages.js'
 import Success from '../utils/success.js'
 import httpStatusCodes from '../utils/httpStatusCodes.js'
@@ -31,4 +37,12 @@ export const updateReminderController = async (req, res) => {
   !reminder
     ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
     : res.json(Success(reminder, responseMessages.UPDATE_SUCCESS))
+}
+
+// Delete reminder controller logic
+export const deleteReminderController = async (req, res) => {
+  const reminder = await deleteReminderService(req.params.id)
+  !reminder
+    ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+    : res.json(Success(reminder, responseMessages.DELETE_SUCCESS))
 }

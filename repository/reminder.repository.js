@@ -36,3 +36,12 @@ export const updateReminder = (id, data) =>
     }).catch((error) => {
       throw new AppError(error)
     })
+
+// Delete reminder repository logic
+export const deleteReminder = (id) =>
+  Reminder.findByIdAndDelete(id)
+    .then((reminder) => {
+      return Promise.resolve(reminder)
+    }).catch((error) => {
+      throw new AppError(error)
+    })

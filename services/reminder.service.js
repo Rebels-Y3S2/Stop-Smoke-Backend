@@ -1,4 +1,10 @@
-import { createReminder, fetchReminders, fetchReminder, updateReminder } from '../repository/index.js'
+import {
+  createReminder,
+  fetchReminders,
+  fetchReminder,
+  updateReminder,
+  deleteReminder
+} from '../repository/index.js'
 import responseMessages from '../utils/responseMessages.js'
 
 // Create reminder service logic
@@ -36,6 +42,16 @@ export const fetchReminderService = async (id) => {
 export const updateReminderService = async (id, data) => {
   try {
     const reminder = await updateReminder(id, data)
+    return Promise.resolve(reminder)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+// Delete reminder service logic
+export const deleteReminderService = async (id) => {
+  try {
+    const reminder = await deleteReminder(id)
     return Promise.resolve(reminder)
   } catch (error) {
     console.log(error)

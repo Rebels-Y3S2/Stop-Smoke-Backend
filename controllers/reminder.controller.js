@@ -31,7 +31,7 @@ export const fetchRemindersController = async (req, res) => {
   }
 }
 
-// Fetch reminder comtroller logic
+// Fetch reminder controller logic
 export const fetchReminderController = async (req, res) => {
   try{
     const reminder = await fetchReminderService(req.params.id)

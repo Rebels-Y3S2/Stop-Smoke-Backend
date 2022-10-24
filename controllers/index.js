@@ -11,6 +11,7 @@ import {
 import {
   saveUser, 
   getUsers,
+  getUser,
 } from "./users.controller.js";
 
 // Exports
@@ -23,4 +24,5 @@ export {
 
   saveUser,
   getUsers,
+  getUser,
 }

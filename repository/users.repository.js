@@ -18,3 +18,12 @@ export const getUsers = () =>
     .catch(() => {
       throw new AppError("Internal server error.", 500);
     });
+
+export const getUser= (id) =>
+  User.findById(id)
+  .then((user) => {
+    return Promise.resolve(user);
+  })
+  .catch(() => {
+    throw new AppError("Internal server error.", 500);
+  });

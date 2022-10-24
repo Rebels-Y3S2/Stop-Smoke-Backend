@@ -10,6 +10,7 @@ import {
 import {
   saveUserService, 
   getUsersService,
+  getUserService,
 } from "./users.service.js";
 
 // Exports
@@ -22,4 +23,5 @@ export {
 
   saveUserService, 
   getUsersService,
+  getUserService,
 }

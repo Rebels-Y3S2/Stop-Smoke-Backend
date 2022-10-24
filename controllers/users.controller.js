@@ -1,6 +1,7 @@
 import {
     saveUserService, 
     getUsersService,
+    getUserService,
 } from '../services/index.js';
 import Success from "../utils/success.js";
 
@@ -14,3 +15,7 @@ import Success from "../utils/success.js";
     res.json(Success(users, "Successfully fetched Users."));
   };
   
+  export const getUser = async (req, res) => {
+    const user = await getUserService(req.params.id);
+    res.json(Success(user, "Successfully fetched Users."));
+  };

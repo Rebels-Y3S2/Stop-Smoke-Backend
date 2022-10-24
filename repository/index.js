@@ -10,6 +10,7 @@ import {
 import { 
   saveUser, 
   getUsers,
+  getUser,
 } from "./users.repository.js";
 
 // Exports
@@ -22,4 +23,5 @@ export {
 
   saveUser, 
   getUsers,
+  getUser,
 }

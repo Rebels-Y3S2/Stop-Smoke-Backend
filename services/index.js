@@ -7,11 +7,17 @@ import {
   deleteReminderService
 } from './reminder.service.js'
 
+import {
+  saveUserService, 
+} from "./users.service.js";
+
 // Exports
 export {
   createReminderService,
   fetchRemindersService,
   fetchReminderService,
   updateReminderService,
-  deleteReminderService
+  deleteReminderService,
+
+  saveUserService, 
 }

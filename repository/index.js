@@ -7,11 +7,17 @@ import {
   deleteReminder
 } from './reminder.repository.js'
 
+import { 
+  saveUser, 
+} from "./users.repository.js";
+
 // Exports
 export {
   createReminder,
   fetchReminders,
   fetchReminder,
   updateReminder,
-  deleteReminder
+  deleteReminder,
+
+  saveUser, 
 }

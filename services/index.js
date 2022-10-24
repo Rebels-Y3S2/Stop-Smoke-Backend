@@ -11,6 +11,7 @@ import {
   saveUserService, 
   getUsersService,
   getUserService,
+  deleteUserService,
 } from "./users.service.js";
 
 // Exports
@@ -24,4 +25,5 @@ export {
   saveUserService, 
   getUsersService,
   getUserService,
+  deleteUserService,
 }

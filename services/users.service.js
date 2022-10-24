@@ -2,6 +2,7 @@ import {
     saveUser,
     getUsers,
     getUser,
+    deleteUser,
 } from '../repository/index.js';
 
 export const saveUserService = async (data) => {
@@ -19,5 +20,10 @@ export const getUsersService = async () => {
 
  export const getUserService = async (id) => {
     const user = await getUser(id);
+    return Promise.resolve(user);
+};
+
+export const deleteUserService = async (id) => {
+    const user = await deleteUser(id);
     return Promise.resolve(user);
 };

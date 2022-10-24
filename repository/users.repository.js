@@ -27,3 +27,12 @@ export const getUser= (id) =>
   .catch(() => {
     throw new AppError("Internal server error.", 500);
   });
+
+export const deleteUser = (id) =>
+  User.findByIdAndDelete(id)
+  .then((user) => {
+    return Promise.resolve(user);
+  })
+  .catch(() => {
+    throw new AppError("Internal server error.", 500);
+  });

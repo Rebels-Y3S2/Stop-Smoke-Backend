@@ -2,6 +2,7 @@ import {
     saveUserService, 
     getUsersService,
     getUserService,
+    deleteUserService,
 } from '../services/index.js';
 import Success from "../utils/success.js";
 
@@ -18,4 +19,9 @@ import Success from "../utils/success.js";
   export const getUser = async (req, res) => {
     const user = await getUserService(req.params.id);
     res.json(Success(user, "Successfully fetched Users."));
+  };
+
+  export const deleteUser = async (req, res) => {
+    const user = await deleteUserService(req.params.id);
+    res.json(Success(user, "Successfully deleted User."));
   };

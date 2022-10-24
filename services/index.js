@@ -12,6 +12,7 @@ import {
   getUsersService,
   getUserService,
   deleteUserService,
+  updateUserService,
 } from "./users.service.js";
 
 // Exports
@@ -26,4 +27,5 @@ export {
   getUsersService,
   getUserService,
   deleteUserService,
+  updateUserService,
 }

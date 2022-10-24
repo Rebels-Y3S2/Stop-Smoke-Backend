@@ -13,6 +13,7 @@ import {
   getUsers,
   getUser,
   deleteUser,
+  updateUser,
 } from "./users.controller.js";
 
 // Exports
@@ -27,4 +28,5 @@ export {
   getUsers,
   getUser,
   deleteUser,
+  updateUser,
 }

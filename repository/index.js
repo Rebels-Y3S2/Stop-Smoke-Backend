@@ -12,6 +12,7 @@ import {
   getUsers,
   getUser,
   deleteUser,
+  updateUser,
 } from "./users.repository.js";
 
 // Exports
@@ -26,4 +27,5 @@ export {
   getUsers,
   getUser,
   deleteUser,
+  updateUser,
 }

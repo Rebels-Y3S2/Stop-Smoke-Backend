@@ -9,6 +9,7 @@ import {
 
 import { 
   saveUser, 
+  getUsers,
 } from "./users.repository.js";
 
 // Exports
@@ -20,4 +21,5 @@ export {
   deleteReminder,
 
   saveUser, 
+  getUsers,
 }

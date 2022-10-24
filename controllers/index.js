@@ -10,6 +10,7 @@ import {
 
 import {
   saveUser, 
+  getUsers,
 } from "./users.controller.js";
 
 // Exports
@@ -21,4 +22,5 @@ export {
   deleteReminderController,
 
   saveUser,
+  getUsers,
 }

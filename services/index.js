@@ -9,6 +9,7 @@ import {
 
 import {
   saveUserService, 
+  getUsersService,
 } from "./users.service.js";
 
 // Exports
@@ -20,4 +21,5 @@ export {
   deleteReminderService,
 
   saveUserService, 
+  getUsersService,
 }

@@ -4,24 +4,48 @@ import {
     getUserService,
     deleteUserService,
 } from '../services/index.js';
-import Success from "../utils/success.js";
+import responseMessages from '../utils/responseMessages.js'
+import Success from '../utils/success.js'
+import httpStatusCodes from '../utils/httpStatusCodes.js'
 
   export const saveUser = async (req, res) => {
+    try {
       const user = await saveUserService(req.body);
-      res.json(Success(user, "Successfully created User."));
+      res.json(Success(user, responseMessages.SAVE_SUCCESS))
+    } catch (error) {
+        res.json(error)
+    }
   };
   
   export const getUsers = async (req, res) => {
-    const users = await getUsersService();
-    res.json(Success(users, "Successfully fetched Users."));
+    try {
+        const users = await getUsersService();
+        users.length === 0
+        ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+        : res.json(Success(users, responseMessages.FETCH_SUCCESS))
+      } catch (error) {
+          res.json(error)
+      }
   };
   
   export const getUser = async (req, res) => {
-    const user = await getUserService(req.params.id);
-    res.json(Success(user, "Successfully fetched Users."));
+    try {
+        const user = await getUserService(req.params.id);
+        !user
+        ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+        : res.json(Success(user, responseMessages.FETCH_SUCCESS))
+      } catch (error) {
+          res.json(error)
+      }
   };
 
   export const deleteUser = async (req, res) => {
-    const user = await deleteUserService(req.params.id);
-    res.json(Success(user, "Successfully deleted User."));
+    try {
+        const user = await deleteUserService(req.params.id);
+        !user
+        ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
+        : res.json(Success(user, responseMessages.DELETE_SUCCESS))
+      } catch (error) {
+          res.json(error)
+      }
   };

@@ -1,38 +1,13 @@
 import { User } from "../models/index.js";
-import AppError from "../utils/appError.js";
 
 export const saveUser = (data) =>
-  User.create(data)
-    .then((user) => {
-      return Promise.resolve(user);
-    })
-    .catch(() => {
-      throw new AppError("Internal server error.", 500);
-    });
+  User.create(data);
 
 export const getUsers = () =>
-  User.find()
-    .then((users) => {
-      return Promise.resolve(users);
-    })
-    .catch(() => {
-      throw new AppError("Internal server error.", 500);
-    });
+  User.find();
 
 export const getUser= (id) =>
-  User.findById(id)
-  .then((user) => {
-    return Promise.resolve(user);
-  })
-  .catch(() => {
-    throw new AppError("Internal server error.", 500);
-  });
+  User.findById(id);
 
 export const deleteUser = (id) =>
-  User.findByIdAndDelete(id)
-  .then((user) => {
-    return Promise.resolve(user);
-  })
-  .catch(() => {
-    throw new AppError("Internal server error.", 500);
-  });
+  User.findByIdAndDelete(id);

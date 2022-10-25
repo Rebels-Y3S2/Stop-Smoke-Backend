@@ -15,6 +15,13 @@ import {
   deleteReminderController
 } from './reminder.controller.js'
 
+import {
+  saveUser, 
+  getUsers,
+  getUser,
+  deleteUser,
+  updateUser,
+} from "./users.controller.js";
 
 // Exports
 export {
@@ -23,6 +30,12 @@ export {
   fetchReminderController,
   updateReminderController,
   deleteReminderController,
+
+  saveUser,
+  getUsers,
+  getUser,
+  deleteUser,
+  updateUser,
 
   createDiaryController,
   deleteDiaryController,

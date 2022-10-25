@@ -15,6 +15,13 @@ import {
   deleteReminder
 } from './reminder.repository.js'
 
+import { 
+  saveUser, 
+  getUsers,
+  getUser,
+  deleteUser,
+  updateUser,
+} from "./users.repository.js";
 
 // Exports
 export {
@@ -24,6 +31,12 @@ export {
   fetchReminder,
   updateReminder,
   deleteReminder,
+
+  saveUser, 
+  getUsers,
+  getUser,
+  deleteUser,
+  updateUser,
 
   //diary func
   createDiary,

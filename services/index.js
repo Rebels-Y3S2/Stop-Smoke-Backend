@@ -14,6 +14,14 @@ import {
   deleteReminderService
 } from './reminder.service.js'
 
+import {
+  saveUserService, 
+  getUsersService,
+  getUserService,
+  deleteUserService,
+  updateUserService,
+} from "./users.service.js";
+
 // Exports
 export {
   createReminderService,
@@ -22,6 +30,12 @@ export {
   updateReminderService,
   deleteReminderService,
 
+  saveUserService, 
+  getUsersService,
+  getUserService,
+  deleteUserService,
+  updateUserService,
+  
   createDiaryService,
   deleteDiaryService,
   fetchDiariesService,

@@ -1,4 +1,11 @@
 // Imports
+import { 
+  createDiaryService,
+  deleteDiaryService,
+  fetchDiariesService,
+  fetchDiaryService,
+  updateDiaryService
+} from './diary.service.js'
 import {
   createReminderService,
   fetchRemindersService,
@@ -28,4 +35,10 @@ export {
   getUserService,
   deleteUserService,
   updateUserService,
+  
+  createDiaryService,
+  deleteDiaryService,
+  fetchDiariesService,
+  fetchDiaryService,
+  updateDiaryService,
 }

@@ -1,4 +1,5 @@
 // Imports
+import { Diary } from './diary.model.js'
 import { Reminder } from './reminder.model.js'
 import { User } from './users.model.js'
 
@@ -6,4 +7,5 @@ import { User } from './users.model.js'
 export {
   Reminder,
   User,
+  Diary
 }

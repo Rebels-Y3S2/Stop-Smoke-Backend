@@ -22,7 +22,7 @@ export const createReminderController = async (req, res) => {
 // Fetch reminders controller logic
 export const fetchRemindersController = async (req, res) => {
   try{
-    const reminders = await fetchRemindersService()
+    const reminders = await fetchRemindersService(req.params.userId)
     reminders.length === 0
       ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
       : res.json(Success(reminders, responseMessages.FETCH_SUCCESS))

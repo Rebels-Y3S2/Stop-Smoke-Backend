@@ -8,7 +8,7 @@ import {
 import {User, validate} from "../models/index.js";
 import bcrypt from "bcrypt";
 import Joi from "joi";
-import { jsonResponse } from "../utils/serviceUtilities.js";
+import responseMessages from '../utils/responseMessages.js'
 
 // Create User service logic
 export const saveUserService = (data) => {
@@ -54,7 +54,7 @@ export const login = async (req, res) => {
 
 		const user = await User.findOne({ email: req.body.email });
 		if (!user)
-			return res.status(401).send({ message: "Invalid Email or Password" });
+			return res.status(401).send({ message: responseMessages.INVALID_EMAIL_PASSWORD });
 
 		//check if entered password is valid
 		const isValidPassword = await bcrypt.compare(
@@ -62,12 +62,12 @@ export const login = async (req, res) => {
 			user.password
 		);
 		if (!isValidPassword)
-			return res.status(401).send({ message: "Invalid Email or Password" });
+			return res.status(401).send({ message: responseMessages.INVALID_EMAIL_PASSWORD });
 
 		const token = user.generateAuthToken();
-		res.status(200).send({ data: token, message: "Logged in successfully", userData: user });
+		res.status(200).send({ data: token, message: responseMessages.LOGIN_SUCCESS, userData: user });
 	} catch (error) {
-		res.status(500).send({ message: "Internal Server Error" });
+		res.status(500).send({ message: responseMessages.INTERNAL_SERVER_ERROR });
 	}
 };
 
@@ -82,7 +82,7 @@ export const register = async (req, res) => {
 		if (user)
 			return res
 				.status(409)
-				.send({ message: "User with given email already Exist!" });
+				.send({ message: responseMessages.EMAIL_ALREADY_EXIST });
 
         //To get salt string we will be using genSalt and storing it in the salt variable
 		const salt = await bcrypt.genSalt(Number(process.env.SALT));
@@ -91,8 +91,8 @@ export const register = async (req, res) => {
 		const hashPassword = await bcrypt.hash(req.body.password, salt);
 
 		await new User({ ...req.body, password: hashPassword }).save();
-		res.status(201).send({ message: "User created successfully", isSuccessfull: true });
+		res.status(201).send({ message: responseMessages.USER_CREATED_SUCCESS, isSuccessfull: true });
 	} catch (error) {
-		res.status(500).send({ message: "Internal Server Error", isSuccessfull: false });
+		res.status(500).send({ message: responseMessages.INTERNAL_SERVER_ERROR , isSuccessfull: false });
 	}
 };

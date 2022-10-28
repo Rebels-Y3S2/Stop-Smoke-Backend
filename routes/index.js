@@ -6,7 +6,7 @@ import userRouter from "./users.routes.js";
 const apiRouter = express.Router();
 
 apiRouter.use('/reminders', reminderRouter);
-apiRouter.use("/user", userRouter);
+apiRouter.use("/users", userRouter);
 apiRouter.use('/diaries', diaryRouter)
 
 export default apiRouter;

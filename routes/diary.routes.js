@@ -10,7 +10,7 @@ import {
 const diaryRouter = express.Router();
 
 diaryRouter.post('/', createDiaryController);
-diaryRouter.get('/', fetchDiariesController);
+diaryRouter.get('/records/:userId', fetchDiariesController);
 diaryRouter.get('/:id', fetchDiaryController);
 diaryRouter.put('/:id', updateDiaryController);
 diaryRouter.delete('/:id', deleteDiaryController);

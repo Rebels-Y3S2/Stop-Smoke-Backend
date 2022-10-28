@@ -10,7 +10,7 @@ import {
 const reminderRouter = express.Router()
 
 reminderRouter.post('/', createReminderController)
-reminderRouter.get('/', fetchRemindersController)
+reminderRouter.get('/users/:userId', fetchRemindersController)
 reminderRouter.get('/:id', fetchReminderController)
 reminderRouter.put('/:id', updateReminderController)
 reminderRouter.delete('/:id', deleteReminderController)

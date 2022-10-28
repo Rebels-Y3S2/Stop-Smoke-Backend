@@ -6,8 +6,8 @@ export const createReminder = (data) =>
   Reminder.create(data);
 
 // Fetch reminders repository logic
-export const fetchReminders = () =>
-  Reminder.find()
+export const fetchReminders = (userId) =>
+  Reminder.find({userId})
 
 // Fetch reminder repository logic
 export const fetchReminder = (id) =>

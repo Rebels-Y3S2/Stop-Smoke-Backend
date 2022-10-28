@@ -8,13 +8,13 @@ import {
 
 // Create reminder service logic
 export const createReminderService = (data) => {
-    const { reminderTitle, startDate, endDate, customQuote, challenge, diary } = data
-    return createReminder({ reminderTitle, startDate, endDate, customQuote, challenge, diary })
+    const { userId, reminderTitle, startDate, endDate, startTime, customQuote, challenge, diary } = data
+    return createReminder({ userId, reminderTitle, startDate, endDate, startTime, customQuote, challenge, diary })
 }
 
 // Fetch reminders service logic
-export const fetchRemindersService = () => {
-    return fetchReminders()
+export const fetchRemindersService = (userId) => {
+    return fetchReminders(userId)
 }
 
 // Fetch reminder service logic

@@ -7,8 +7,8 @@ export const createDiaryService = (data) => {
 }
 
 // Fetch diaries service logic
-export const fetchDiariesService = () => {
-    return fetchDiaries()
+export const fetchDiariesService = (userId) => {
+    return fetchDiaries(userId)
 }
 
 // Fetch diary service logic

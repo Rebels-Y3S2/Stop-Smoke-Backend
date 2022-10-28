@@ -5,8 +5,8 @@ export const createDiary = (data) =>
   Diary.create(data);
 
 // Fetch diary repository logic
-export const fetchDiaries = () =>
-  Diary.find()
+export const fetchDiaries = (userId) =>
+  Diary.find({userId})
 
 // Fetch diary repository logic
 export const fetchDiary = (id) =>

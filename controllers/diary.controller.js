@@ -22,7 +22,7 @@
   // Fetch diaries controller logic
   export const fetchDiariesController = async (req, res) => {
     try{
-      const diaries = await fetchDiariesService()
+      const diaries = await fetchDiariesService(req.params.userId)
       diaries.length === 0
         ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
         : res.json(Success(diaries, responseMessages.FETCH_SUCCESS))

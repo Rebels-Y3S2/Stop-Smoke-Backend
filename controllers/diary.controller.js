@@ -35,7 +35,7 @@
   export const fetchDiaryController = async (req, res) => {
     try{
       const diary = await fetchDiaryService(req.params.id)
-      !reminder
+      !diary
         ? res.status(httpStatusCodes.NO_CONTENT).json(responseMessages.NO_CONTENT)
         : res.json(Success(diary, responseMessages.FETCH_SUCCESS))
     }catch(error){

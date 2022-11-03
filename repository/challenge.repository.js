@@ -1,21 +1,21 @@
 import { Challenge } from '../models/index.js';
 
-// Create diary repository logic
+// Create challenge repository logic
 export const saveChallenge = (data) =>
 Challenge.create(data);
 
-// Fetch diary repository logic
+// Fetch challenge repository logic
 export const fetchChallengesByUserID = (userId) =>
 Challenge.find({userId})
 
-// Fetch diary repository logic
+// Fetch challenge repository logic
 export const fetchChallengeById = (id) =>
 Challenge.findById(id)
 
-// Update diary repository logic
+// Update challenge repository logic
 export const updateChallengeById = (id, data) =>
 Challenge.findByIdAndUpdate(id, data, { new: true })
 
-// Delete diary repository logic
+// Delete challenge repository logic
 export const deleteChallengeById = (id) =>
   Challenge.findByIdAndDelete(id)

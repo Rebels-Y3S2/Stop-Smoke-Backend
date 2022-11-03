@@ -42,3 +42,39 @@ export const incrementDate = (dateInput,increment) => {
   var increasedDate = new Date(dateInput.getTime() +(increment *86400000));
   return increasedDate;
 }
+
+export const getChallengePath = (challengeDuration) => {
+  let challengePath;
+  if (challengeDuration == 60) {
+    challengePath = "../utils/challenges/60dayChallenges.json";
+  } else if (challengeDuration == 30) {
+    challengePath = "../utils/challenges/30dayChallenges.json";
+  }
+  return challengePath;
+}
+
+export const getChallengeType = (challengeType) => {
+  let type;
+  switch(challengeType) {
+    case 1: {
+      type = commonConstants.TYPE_1;
+      break;
+    }
+    case 2: {
+      type = commonConstants.TYPE_2;
+      break;
+    }
+    case 3: {
+      type = commonConstants.TYPE_3;
+      break;
+    }
+    case 4: {
+      type = commonConstants.TYPE_4;
+      break;
+    }
+    default: {
+      type = commonConstants.TYPE_4;
+    }
+  }
+  return type;
+}

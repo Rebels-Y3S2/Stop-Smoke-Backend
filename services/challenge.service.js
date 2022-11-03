@@ -1,25 +1,34 @@
 import { readFile } from "fs/promises";
-import { getRandomNumber, incrementDate } from "../utils/serviceUtilities.js";
+import { saveChallenge } from "../repository/challenge.repository.js";
+import commonConstants from "../utils/commonConstants.js";
+import {
+  getChallengePath,
+  getChallengeType,
+  getRandomNumber,
+  incrementDate,
+} from "../utils/serviceUtilities.js";
 
-export const createChallengeService = async (
+export const createChallenge = async (
   challengeDuration,
   smokingType
 ) => {
   const challenges = JSON.parse(
     await readFile(
-      new URL("../utils/challenges/30dayChallenges.json", import.meta.url)
+      new URL(getChallengePath(challengeDuration), import.meta.url)
     )
   );
   const tasks = JSON.parse(
     await readFile(new URL("../utils/challenges/tasks.json", import.meta.url))
   );
   const newChallenge = {};
-  newChallenge.name = "My Challenge";
   newChallenge.tasks = [];
-  const tasksLength = tasks.length;
   var today = new Date();
+  newChallenge.name = commonConstants.MY_CHALLENGE;
+  newChallenge.duration = challengeDuration;
+  newChallenge.type = smokingType;
+  const tasksLength = tasks.length;
 
-  challenges.type1.forEach((challenge, index) => {
+  challenges[getChallengeType(smokingType)].forEach((challenge, index) => {
     let task1;
     let task2;
     do {
@@ -30,9 +39,22 @@ export const createChallengeService = async (
     challenge.date = incrementDate(today, index);
     challenge.tasks = [tasks[task1], tasks[task2]];
 
-    newChallenge.tasks.push(challenge)
-
+    newChallenge.tasks.push(challenge);
   });
 
-  console.log(newChallenge)
+  return newChallenge;
 };
+
+export const startChallenge = () => {
+  const startDate = new Date();
+}
+
+export const createChallengeService = async (challengeDuration,
+  smokingType) => {
+    const chal = await createChallenge(challengeDuration,
+      smokingType);
+      saveChallenge(chal).then(res => console.log(res)).catch(err => console.log(err))
+
+      console.log(chal);
+    //saveChallenge();
+}

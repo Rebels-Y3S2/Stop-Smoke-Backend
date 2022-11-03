@@ -1,16 +1,19 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const { Schema } = mongoose
+const { Schema } = mongoose;
 
-// Diary data model
-const DiarySchema = new Schema(
+// Challenge data model
+const ChallengeSchema = new Schema(
   {
-    userId: {type: Schema.Types.ObjectId, ref: "user", required: true},
-    title: {type:String, required: true},
-    description: {type: String, required: true},
-    isFavorite: {type: Number, default: 0}
+    userId: { type: Schema.Types.ObjectId, ref: "user", required: true },
+    name: { type: String, required: true },
+    duration: { type: Number },
+    type: { type: Number },
+    tasks: { type: Array, required: true },
+    isStarted: { type: Boolean, default: false },
+    startDate: { type: Date },
   },
   { timestamps: true }
-)
+);
 
-export const Diary = mongoose.model('Diary', DiarySchema)
+export const Challenge = mongoose.model("Challenge", ChallengeSchema);

@@ -16,6 +16,15 @@ import {
 } from './reminder.controller.js'
 
 import {
+  createChallengeController, 
+  getChallengesByUserIdController,
+  getChallengeByIdController,
+  updateChallengeByIdController,
+  startChallengeByIdController,
+  deleteChallengeByIdController
+} from "./challenge.controller.js";
+
+import {
   saveUser, 
   getUsers,
   getUser,
@@ -42,4 +51,11 @@ export {
   fetchDiariesController,
   fetchDiaryController,
   updateDiaryController,
+
+  createChallengeController, 
+  getChallengesByUserIdController,
+  getChallengeByIdController,
+  updateChallengeByIdController,
+  startChallengeByIdController,
+  deleteChallengeByIdController
 }

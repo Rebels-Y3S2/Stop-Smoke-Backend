@@ -1,5 +1,11 @@
 import { readFile } from "fs/promises";
-import { saveChallenge } from "../repository/challenge.repository.js";
+import {
+  deleteChallengeById,
+  fetchChallengeById,
+  fetchChallengesByUserID,
+  saveChallenge,
+  updateChallengeById,
+} from "../repository/challenge.repository.js";
 import commonConstants from "../utils/commonConstants.js";
 import {
   getChallengePath,
@@ -8,10 +14,7 @@ import {
   incrementDate,
 } from "../utils/serviceUtilities.js";
 
-export const createChallenge = async (
-  challengeDuration,
-  smokingType
-) => {
+const createChallenge = async (challengeDuration, smokingType) => {
   const challenges = JSON.parse(
     await readFile(
       new URL(getChallengePath(challengeDuration), import.meta.url)
@@ -45,16 +48,42 @@ export const createChallenge = async (
   return newChallenge;
 };
 
-export const startChallenge = () => {
+export const startChallengeService = (challengeId) => {
   const startDate = new Date();
-}
+  return updateChallengeById(challengeId, { startDate, isStarted: true });
+};
 
-export const createChallengeService = async (challengeDuration,
-  smokingType) => {
-    const chal = await createChallenge(challengeDuration,
-      smokingType);
-      saveChallenge(chal).then(res => console.log(res)).catch(err => console.log(err))
+export const createChallengeService = async ({
+  userId,
+  duration: challengeDuration,
+  type: smokingType
+}) => {
+  console.log('cat')
+  const challenge = await createChallenge(challengeDuration, smokingType);
+  challenge.userId = userId;
+  console.log(challengeDuration, smokingType)
+  return saveChallenge(challenge);
+};
 
-      console.log(chal);
-    //saveChallenge();
-}
+export const updateChallengeByIdService = async (challengeId,{
+  duration: challengeDuration,
+  type: smokingType
+}) => {
+  const updatedChallenge = await createChallenge(
+    challengeDuration,
+    smokingType
+  );
+  return updateChallengeById(challengeId, updatedChallenge);
+};
+
+export const getChallengeByIdService = (challengeId) => {
+  return fetchChallengeById(challengeId);
+};
+
+export const getChallengesByUserIdService = (userId) => {
+  return fetchChallengesByUserID(userId);
+};
+
+export const deleteChallengeByIdService = (challengeId) => {
+  return deleteChallengeById(challengeId);
+};

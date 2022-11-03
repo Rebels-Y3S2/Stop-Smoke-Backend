@@ -56,6 +56,10 @@ export const getChallengePath = (challengeDuration) => {
 export const getChallengeType = (challengeType) => {
   let type;
   switch(challengeType) {
+    case 0: {
+      type = commonConstants.TYPE_0;
+      break;
+    }
     case 1: {
       type = commonConstants.TYPE_1;
       break;

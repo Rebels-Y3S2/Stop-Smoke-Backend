@@ -5,7 +5,7 @@ import {
   fetchChallengesByUserID,
   saveChallenge,
   updateChallengeById,
-} from "../repository/challenge.repository.js";
+} from "../repository/index.js";
 import commonConstants from "../utils/commonConstants.js";
 import {
   getChallengePath,

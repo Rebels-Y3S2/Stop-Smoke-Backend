@@ -8,7 +8,7 @@ const DiarySchema = new Schema(
     userId: {type: Schema.Types.ObjectId, ref: "user", required: true},
     title: {type:String, required: true},
     description: {type: String, required: true},
-    isFavorite: {type: Number, default: 0}
+    isFavorite: {type: Boolean, default: false, required: true}
   },
   { timestamps: true }
 )

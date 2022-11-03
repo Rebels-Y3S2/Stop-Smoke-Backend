@@ -12,8 +12,8 @@ import responseMessages from '../utils/responseMessages.js'
 
 // Create User service logic
 export const saveUserService = (data) => {
-    const { name, email, password, description, type  } = data;
-    return saveUser({ name, email, password, description, type  });
+    const { firstName, email, password, pic, smokingtype } = data;
+    return saveUser({ firstName, email, password, pic, smokingtype });
   };
 
 // Fetch All Users service logic

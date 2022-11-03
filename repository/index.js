@@ -23,6 +23,14 @@ import {
   updateUser,
 } from "./users.repository.js";
 
+import { 
+  saveChallenge, 
+  fetchChallengesByUserID,
+  fetchChallengeById,
+  updateChallengeById,
+  deleteChallengeById,
+} from "./challenge.repository";
+
 // Exports
 export {
   //reminder func
@@ -44,4 +52,11 @@ export {
   fetchDiaries,
   fetchDiary,
   updateDiary,
+
+  //challenges func
+  saveChallenge, 
+  fetchChallengesByUserID,
+  fetchChallengeById,
+  updateChallengeById,
+  deleteChallengeById
 }

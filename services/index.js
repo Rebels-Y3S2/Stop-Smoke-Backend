@@ -24,6 +24,15 @@ import {
   login
 } from "./users.service.js";
 
+import {
+  createChallengeService, 
+  startChallengeService,
+  getChallengesByUserIdService,
+  getChallengeByIdService,
+  updateChallengeByIdService,
+  deleteChallengeByIdService, 
+} from "./challenge.service.js";
+
 // Exports
 export {
   createReminderService,
@@ -45,4 +54,11 @@ export {
   fetchDiariesService,
   fetchDiaryService,
   updateDiaryService,
+
+  createChallengeService, 
+  startChallengeService,
+  getChallengesByUserIdService,
+  getChallengeByIdService,
+  updateChallengeByIdService,
+  deleteChallengeByIdService
 }

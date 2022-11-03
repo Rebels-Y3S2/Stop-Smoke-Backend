@@ -1,0 +1,614 @@
+{
+    "type0": [
+        {
+            "day": 1,
+            "noOfCigs": 0
+        },
+        {
+            "day": 2,
+            "noOfCigs": 1
+        },
+        {
+            "day": 3,
+            "noOfCigs": 0
+        },
+        {
+            "day": 4,
+            "noOfCigs": 0
+        },
+        {
+            "day": 5,
+            "noOfCigs": 0
+        },
+        {
+            "day": 6,
+            "noOfCigs": 0
+        },
+        {
+            "day": 7,
+            "noOfCigs": 0
+        },
+        {
+            "day": 8,
+            "noOfCigs": 0
+        },
+        {
+            "day": 9,
+            "noOfCigs": 0
+        },
+        {
+            "day": 10,
+            "noOfCigs": 0
+        },
+        {
+            "day": 11,
+            "noOfCigs": 0
+        },
+        {
+            "day": 12,
+            "noOfCigs": 0
+        },
+        {
+            "day": 13,
+            "noOfCigs": 0
+        },
+        {
+            "day": 14,
+            "noOfCigs": 0
+        },
+        {
+            "day": 15,
+            "noOfCigs": 0
+        },
+        {
+            "day": 16,
+            "noOfCigs": 1
+        },
+        {
+            "day": 17,
+            "noOfCigs": 0
+        },
+        {
+            "day": 18,
+            "noOfCigs": 0
+        },
+        {
+            "day": 19,
+            "noOfCigs": 0
+        },
+        {
+            "day": 20,
+            "noOfCigs": 0
+        },
+        {
+            "day": 21,
+            "noOfCigs": 0
+        },
+        {
+            "day": 22,
+            "noOfCigs": 0
+        },
+        {
+            "day": 23,
+            "noOfCigs": 0
+        },
+        {
+            "day": 24,
+            "noOfCigs": 0
+        },
+        {
+            "day": 25,
+            "noOfCigs": 0
+        },
+        {
+            "day": 26,
+            "noOfCigs": 0
+        },
+        {
+            "day": 27,
+            "noOfCigs": 0
+        },
+        {
+            "day": 28,
+            "noOfCigs": 0
+        },
+        {
+            "day": 29,
+            "noOfCigs": 0
+        },
+        {
+            "day": 30,
+            "noOfCigs": 0
+        }
+    ],
+    "type1": [
+        {
+            "day": 1,
+            "noOfCigs": 1
+        },
+        {
+            "day": 2,
+            "noOfCigs": 0
+        },
+        {
+            "day": 3,
+            "noOfCigs": 1
+        },
+        {
+            "day": 4,
+            "noOfCigs": 0
+        },
+        {
+            "day": 5,
+            "noOfCigs": 0
+        },
+        {
+            "day": 6,
+            "noOfCigs": 1
+        },
+        {
+            "day": 7,
+            "noOfCigs": 0
+        },
+        {
+            "day": 8,
+            "noOfCigs": 0
+        },
+        {
+            "day": 9,
+            "noOfCigs": 0
+        },
+        {
+            "day": 10,
+            "noOfCigs": 0
+        },
+        {
+            "day": 11,
+            "noOfCigs": 0
+        },
+        {
+            "day": 12,
+            "noOfCigs": 0
+        },
+        {
+            "day": 13,
+            "noOfCigs": 0
+        },
+        {
+            "day": 14,
+            "noOfCigs": 0
+        },
+        {
+            "day": 15,
+            "noOfCigs": 0
+        },
+        {
+            "day": 16,
+            "noOfCigs": 1
+        },
+        {
+            "day": 17,
+            "noOfCigs": 0
+        },
+        {
+            "day": 18,
+            "noOfCigs": 0
+        },
+        {
+            "day": 19,
+            "noOfCigs": 0
+        },
+        {
+            "day": 20,
+            "noOfCigs": 0
+        },
+        {
+            "day": 21,
+            "noOfCigs": 0
+        },
+        {
+            "day": 22,
+            "noOfCigs": 0
+        },
+        {
+            "day": 23,
+            "noOfCigs": 0
+        },
+        {
+            "day": 24,
+            "noOfCigs": 0
+        },
+        {
+            "day": 25,
+            "noOfCigs": 0
+        },
+        {
+            "day": 26,
+            "noOfCigs": 0
+        },
+        {
+            "day": 27,
+            "noOfCigs": 0
+        },
+        {
+            "day": 28,
+            "noOfCigs": 0
+        },
+        {
+            "day": 29,
+            "noOfCigs": 0
+        },
+        {
+            "day": 30,
+            "noOfCigs": 0
+        }
+    ],
+    "type3": [
+        {
+            "day": 1,
+            "noOfCigs": 3
+        },
+        {
+            "day": 2,
+            "noOfCigs": 2
+        },
+        {
+            "day": 3,
+            "noOfCigs": 3
+        },
+        {
+            "day": 4,
+            "noOfCigs": 2
+        },
+        {
+            "day": 5,
+            "noOfCigs": 3
+        },
+        {
+            "day": 6,
+            "noOfCigs": 2
+        },
+        {
+            "day": 7,
+            "noOfCigs": 2
+        },
+        {
+            "day": 8,
+            "noOfCigs": 2
+        },
+        {
+            "day": 9,
+            "noOfCigs": 2
+        },
+        {
+            "day": 10,
+            "noOfCigs": 1
+        },
+        {
+            "day": 11,
+            "noOfCigs": 2
+        },
+        {
+            "day": 12,
+            "noOfCigs": 2
+        },
+        {
+            "day": 13,
+            "noOfCigs": 1
+        },
+        {
+            "day": 14,
+            "noOfCigs": 2
+        },
+        {
+            "day": 15,
+            "noOfCigs": 2
+        },
+        {
+            "day": 16,
+            "noOfCigs": 1
+        },
+        {
+            "day": 17,
+            "noOfCigs": 2
+        },
+        {
+            "day": 18,
+            "noOfCigs": 1
+        },
+        {
+            "day": 19,
+            "noOfCigs": 0
+        },
+        {
+            "day": 20,
+            "noOfCigs": 1
+        },
+        {
+            "day": 21,
+            "noOfCigs": 0
+        },
+        {
+            "day": 22,
+            "noOfCigs": 0
+        },
+        {
+            "day": 23,
+            "noOfCigs": 1
+        },
+        {
+            "day": 24,
+            "noOfCigs": 0
+        },
+        {
+            "day": 25,
+            "noOfCigs": 0
+        },
+        {
+            "day": 26,
+            "noOfCigs": 1
+        },
+        {
+            "day": 27,
+            "noOfCigs": 0
+        },
+        {
+            "day": 28,
+            "noOfCigs": 0
+        },
+        {
+            "day": 29,
+            "noOfCigs": 0
+        },
+        {
+            "day": 30,
+            "noOfCigs": 0
+        }
+    ],
+    "type2": [
+        {
+            "day": 1,
+            "noOfCigs": 1
+        },
+        {
+            "day": 2,
+            "noOfCigs": 0
+        },
+        {
+            "day": 3,
+            "noOfCigs": 1
+        },
+        {
+            "day": 4,
+            "noOfCigs": 0
+        },
+        {
+            "day": 5,
+            "noOfCigs": 1
+        },
+        {
+            "day": 6,
+            "noOfCigs": 0
+        },
+        {
+            "day": 7,
+            "noOfCigs": 1
+        },
+        {
+            "day": 8,
+            "noOfCigs": 0
+        },
+        {
+            "day": 9,
+            "noOfCigs": 0
+        },
+        {
+            "day": 10,
+            "noOfCigs": 1
+        },
+        {
+            "day": 11,
+            "noOfCigs": 0
+        },
+        {
+            "day": 12,
+            "noOfCigs": 0
+        },
+        {
+            "day": 13,
+            "noOfCigs": 1
+        },
+        {
+            "day": 14,
+            "noOfCigs": 0
+        },
+        {
+            "day": 15,
+            "noOfCigs": 0
+        },
+        {
+            "day": 16,
+            "noOfCigs": 1
+        },
+        {
+            "day": 17,
+            "noOfCigs": 0
+        },
+        {
+            "day": 18,
+            "noOfCigs": 0
+        },
+        {
+            "day": 19,
+            "noOfCigs": 0
+        },
+        {
+            "day": 20,
+            "noOfCigs": 1
+        },
+        {
+            "day": 21,
+            "noOfCigs": 0
+        },
+        {
+            "day": 22,
+            "noOfCigs": 0
+        },
+        {
+            "day": 23,
+            "noOfCigs": 0
+        },
+        {
+            "day": 24,
+            "noOfCigs": 1
+        },
+        {
+            "day": 25,
+            "noOfCigs": 0
+        },
+        {
+            "day": 26,
+            "noOfCigs": 0
+        },
+        {
+            "day": 27,
+            "noOfCigs": 0
+        },
+        {
+            "day": 28,
+            "noOfCigs": 0
+        },
+        {
+            "day": 29,
+            "noOfCigs": 0
+        },
+        {
+            "day": 30,
+            "noOfCigs": 0
+        }
+    ],
+    "type4": [
+        {
+            "day": 1,
+            "noOfCigs": 5
+        },
+        {
+            "day": 2,
+            "noOfCigs": 4
+        },
+        {
+            "day": 3,
+            "noOfCigs": 5
+        },
+        {
+            "day": 4,
+            "noOfCigs": 4
+        },
+        {
+            "day": 5,
+            "noOfCigs": 4
+        },
+        {
+            "day": 6,
+            "noOfCigs": 4
+        },
+        {
+            "day": 7,
+            "noOfCigs": 3
+        },
+        {
+            "day": 8,
+            "noOfCigs": 4
+        },
+        {
+            "day": 9,
+            "noOfCigs": 3
+        },
+        {
+            "day": 10,
+            "noOfCigs": 3
+        },
+        {
+            "day": 11,
+            "noOfCigs": 3
+        },
+        {
+            "day": 12,
+            "noOfCigs": 4
+        },
+        {
+            "day": 13,
+            "noOfCigs": 3
+        },
+        {
+            "day": 14,
+            "noOfCigs": 2
+        },
+        {
+            "day": 15,
+            "noOfCigs": 3
+        },
+        {
+            "day": 16,
+            "noOfCigs": 3
+        },
+        {
+            "day": 17,
+            "noOfCigs": 2
+        },
+        {
+            "day": 18,
+            "noOfCigs": 3
+        },
+        {
+            "day": 19,
+            "noOfCigs": 2
+        },
+        {
+            "day": 20,
+            "noOfCigs": 2
+        },
+        {
+            "day": 21,
+            "noOfCigs": 2
+        },
+        {
+            "day": 22,
+            "noOfCigs": 2
+        },
+        {
+            "day": 23,
+            "noOfCigs": 1
+        },
+        {
+            "day": 24,
+            "noOfCigs": 2
+        },
+        {
+            "day": 25,
+            "noOfCigs": 1
+        },
+        {
+            "day": 26,
+            "noOfCigs": 1
+        },
+        {
+            "day": 27,
+            "noOfCigs": 0
+        },
+        {
+            "day": 28,
+            "noOfCigs": 0
+        },
+        {
+            "day": 29,
+            "noOfCigs": 0
+        },
+        {
+            "day": 30,
+            "noOfCigs": 0
+        }
+    ]
+}
+
+

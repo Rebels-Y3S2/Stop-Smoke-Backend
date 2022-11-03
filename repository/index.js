@@ -29,7 +29,7 @@ import {
   fetchChallengeById,
   updateChallengeById,
   deleteChallengeById,
-} from "./challenge.repository";
+} from "./challenge.repository.js";
 
 // Exports
 export {

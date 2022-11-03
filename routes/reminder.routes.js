@@ -7,6 +7,7 @@ import {
   deleteReminderController
 } from '../controllers/index.js'
 
+// Creates Router instance
 const reminderRouter = express.Router()
 
 reminderRouter.post('/', createReminderController)

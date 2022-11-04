@@ -6,6 +6,7 @@ const responseMessages = {
   UPDATE_SUCCESS: 'Details updated successfully!',
   DELETE_SUCCESS: 'Details deleted successfully!',
   INVALID_EMAIL_PASSWORD: "Invalid Email or Password",
+  USER_NOT_EXIST: "Invalid user",
   LOGIN_SUCCESS: "Logged in successfully",
   EMAIL_ALREADY_EXIST: "User with given email already Exist!",
   USER_CREATED_SUCCESS: "User created successfully",

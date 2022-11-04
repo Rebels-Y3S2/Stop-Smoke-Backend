@@ -16,6 +16,11 @@ export const createReminder = (data) =>
  */
 export const fetchReminders = (userId) =>
   Reminder.find({userId})
+    .populate("challenge",{
+      name:1
+    }).populate("diary",{
+      title:1
+    })
 
 /**
  * Handles the repository logic of fetching reminder details specific to the reminderId passed in to the parameter
@@ -24,6 +29,11 @@ export const fetchReminders = (userId) =>
  */
 export const fetchReminder = (reminderId) =>
   Reminder.findById(reminderId)
+    .populate("challenge",{
+      name:1
+    }).populate("diary",{
+      title:1
+    })
 
 /**
  * Handles the repository logic of updating reminder details belonging to the reminderId passed in the parameter

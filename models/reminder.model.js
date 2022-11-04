@@ -11,8 +11,8 @@ const ReminderSchema = new Schema(
     endDate: String,
     startTime: String,
     customQuote: String,
-    challenge: String,
-    diary: String
+    challenge:{type: Schema.Types.ObjectId, ref: "Challenge"} ,
+    diary: {type: Schema.Types.ObjectId, ref: "Diary"}
   },
   { timestamps: true }
 )

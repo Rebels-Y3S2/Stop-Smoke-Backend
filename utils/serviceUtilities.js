@@ -82,3 +82,13 @@ export const getChallengeType = (challengeType) => {
   }
   return type;
 }
+
+export function getAllowedCigs(cigCount) {
+  if (cigCount == 0) {
+    return "You are not allowed to smoke today";
+  } else if (cigCount == 1) {
+    return `You are allowed to smoke only ${cigCount} cigarrate today`;
+  } else {
+    return `You are allowed to smoke ${cigCount} cigarrates today`;
+  }
+}

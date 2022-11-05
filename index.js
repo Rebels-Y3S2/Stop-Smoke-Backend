@@ -11,9 +11,9 @@ const App = express()
 App.use(express.json())
 App.use(cors({ origin: '*' }))
 
-connect()
+connect();
 
-App.use('/api', apiRouter)
+App.use('/api', apiRouter);
 
 const port = process.env.PORT || 3001
 App.listen(port, console.log(portCon(`🚀 Server listening on PORT ${process.env.PORT} 🚀`)))

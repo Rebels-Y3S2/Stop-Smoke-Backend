@@ -6,7 +6,7 @@ Challenge.create(data);
 
 // Fetch challenge repository logic
 export const fetchChallengesByUserID = (userId) =>
-Challenge.find({userId})
+Challenge.find({userId}).select('-tasks')
 
 // Fetch challenge repository logic
 export const fetchChallengeById = (id) =>

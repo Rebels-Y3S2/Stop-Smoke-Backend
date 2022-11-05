@@ -8,6 +8,7 @@ import {
 } from "../repository/index.js";
 import commonConstants from "../utils/commonConstants.js";
 import {
+  getAllowedCigs,
   getChallengePath,
   getChallengeType,
   getRandomNumber,
@@ -40,7 +41,7 @@ const createChallenge = async (challengeDuration, smokingType) => {
     } while (task1 === task2);
 
     challenge.date = incrementDate(today, index);
-    challenge.tasks = [tasks[task1], tasks[task2]];
+    challenge.tasks = [getAllowedCigs(challenge.noOfCigs), tasks[task1], tasks[task2]];
 
     newChallenge.tasks.push(challenge);
   });

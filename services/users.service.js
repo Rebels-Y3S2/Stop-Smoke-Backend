@@ -9,6 +9,7 @@ import {User, validate} from "../models/index.js";
 import bcrypt from "bcrypt";
 import Joi from "joi";
 import responseMessages from '../utils/responseMessages.js'
+import { createChallengeService } from './challenge.service.js';
 
 // Create User service logic
 export const saveUserService = (data) => {
@@ -90,7 +91,10 @@ export const register = async (req, res) => {
         //bcrypt password to hashing algorithm
 		const hashPassword = await bcrypt.hash(req.body.password, salt);
 
-		await new User({ ...req.body, password: hashPassword }).save();
+		const newUser = await new User({ ...req.body, password: hashPassword }).save();
+		createChallengeService({userId: newUser._id, duration: 60, type: 1, challengeName: 'Quite smoke'});
+		createChallengeService({userId: newUser._id, duration: 30, type: 2, challengeName: 'No more smoking'});
+		createChallengeService({userId: newUser._id, duration: 60, type: 3, challengeName: 'Say no to cigarettes'});
 		res.status(201).send({ message: responseMessages.USER_CREATED_SUCCESS, isSuccessfull: true });
 	} catch (error) {
 		res.status(500).send({ message: responseMessages.INTERNAL_SERVER_ERROR , isSuccessfull: false });

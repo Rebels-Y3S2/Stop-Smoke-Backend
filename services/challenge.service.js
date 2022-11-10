@@ -15,7 +15,7 @@ import {
   incrementDate,
 } from "../utils/serviceUtilities.js";
 
-const createChallenge = async (challengeDuration, smokingType) => {
+const createChallenge = async (challengeDuration, smokingType, challengeName) => {
   const challenges = JSON.parse(
     await readFile(
       new URL(getChallengePath(challengeDuration), import.meta.url)
@@ -27,7 +27,7 @@ const createChallenge = async (challengeDuration, smokingType) => {
   const newChallenge = {};
   newChallenge.tasks = [];
   var today = new Date();
-  newChallenge.name = commonConstants.MY_CHALLENGE;
+  newChallenge.name = challengeName || commonConstants.MY_CHALLENGE;
   newChallenge.duration = challengeDuration;
   newChallenge.type = smokingType;
   const tasksLength = tasks.length;
@@ -57,10 +57,11 @@ export const startChallengeService = (challengeId) => {
 export const createChallengeService = async ({
   userId,
   duration: challengeDuration,
-  type: smokingType
+  type: smokingType,
+  challengeName
 }) => {
   console.log('cat')
-  const challenge = await createChallenge(challengeDuration, smokingType);
+  const challenge = await createChallenge(challengeDuration, smokingType, challengeName);
   challenge.userId = userId;
   console.log(challengeDuration, smokingType)
   return saveChallenge(challenge);
